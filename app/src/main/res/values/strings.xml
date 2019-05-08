@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">TheSheCode</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <string-array name="skill_set">
+        <item>I am a beginner</item>
+        <item>Android developer</item>
+        <item>ios developer</item>
+        <item>Frontend developer</item>
+        <item>Backend Developer</item>
+        <item>Full Stack Developer</item>
+        <item>Data Scientist</item>
+        <item>Cloud Engineer</item>
+        <item>ML engineer</item>
+    </string-array>
 </resources>

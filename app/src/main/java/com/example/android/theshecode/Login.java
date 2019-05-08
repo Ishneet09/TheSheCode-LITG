@@ -1,3 +1,5 @@
+package com.example.android.theshecode;
+
 public class Login {
     String email;
     String password;
