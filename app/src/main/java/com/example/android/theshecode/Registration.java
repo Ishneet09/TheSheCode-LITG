@@ -16,6 +16,7 @@ public class Registration {
     }
 
     public Registration(String name, String email, String password, String LinkedInURL, String country, String state,String profession,  String address, String experience ){
+
         this.name = name;
         this.email = email;
         this.password = password;
@@ -26,6 +27,7 @@ public class Registration {
         this.profession = profession;
         this.experience = experience;
     }
+
 
     public String getName() {
         return name;

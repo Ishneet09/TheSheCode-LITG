@@ -8,8 +8,8 @@
     tools:context=".RegisterByTextV">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
@@ -23,12 +23,12 @@
             android:textStyle="bold"
             tools:ignore="HardCodedText" />
 
-
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:hint="Name"
             android:inputType="textCapWords"
@@ -37,18 +37,21 @@
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
-            android:hint="Email"
-            android:inputType="textCapWords"
+            android:hint="e-mail"
+            android:inputType="textEmailAddress"
             tools:ignore="HardCodedText" />
+
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:hint="Password"
             android:inputType="textPassword"
@@ -57,162 +60,144 @@
         <EditText
             android:id="@+id/password_confirm"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:hint="Confirm Password"
             android:inputType="textPassword"
             tools:ignore="HardCodedText" />
 
         <EditText
-            android:id="@+id/linkedInURL"
+            android:id="@+id/linkedinURL"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:hint="LinkedIn URL"
             android:inputType="textUri"
-            tools:ignore="HardCodedText" />
+            tools:ignore="HardCodedText"
+            android:textColor="#1A237E"/>
+
+
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="Who are you?"
-            android:textColor="#1A237E"
+            android:text="Professional Title"
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="HardCodedText" />
+            android:textColor="#FF5252"
+            tools:ignore="HardCodedText"
+            />
+
+
 
         <Spinner
-            android:id="@+id/skills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp" />
+            android:id="@+id/skills"
+            />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:text="Experience Level-"
-            android:textColor="#1A237E"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="HardCodedText" />
-
-        <RadioGroup
-            android:id="@+id/radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="ExtraText">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Experience"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF5252"
+            tools:ignore="HardCodedText" />
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_group">
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0-3 years"
+                    android:textColor="#FF5252"
+                    tools:ignore="HardCodedText"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
 
             <RadioButton
-                android:id="@+id/exp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-
-                android:text="No Experience"
-                android:textColor="#C51162"
-                android:textSize="18sp"
+                android:text="5-8 years"
+                android:textColor="#FF5252"
+                tools:ignore="HardCodedText"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="8dp"
                 android:textStyle="bold"
-                tools:ignore="HardCodedText" />
-
+                android:textSize="18sp"/>
 
             <RadioButton
-                android:id="@+id/exp2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-
-                android:text="0-5 years"
-                android:textColor="#C51162"
-                android:textSize="18sp"
+                android:text="Greater than 8 years"
+                android:textColor="#FF5252"
+                tools:ignore="HardCodedText"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="8dp"
                 android:textStyle="bold"
-                tools:ignore="HardCodedText" />
+                android:textSize="18sp"/>
 
 
-            <RadioButton
-                android:id="@+id/exp3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
 
-                android:text="5-10 years"
-                android:textColor="#C51162"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:ignore="HardCodedText" />
 
-            <RadioButton
-                android:id="@+id/exp4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Greater than 10 years"
-                android:textColor="#C51162"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:ignore="HardCodedText" />
+
 
 
         </RadioGroup>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Please enter your address-"
-            android:textColor="#1A237E"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="HardCodedText" />
-
         <EditText
             android:id="@+id/address"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:hint="Address"
-            android:inputType="text"
-            tools:ignore="HardCodedText" />
-
+            android:inputType="textPassword"
+            tools:ignore="HardCodedText"
+            android:textColor="#1A237E"/>
 
         <EditText
             android:id="@+id/state"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:hint="State"
-            android:inputType="text"
-            tools:ignore="HardCodedText" />
-
+            android:inputType="textCapWords"
+            tools:ignore="HardCodedText"
+            android:textColor="#1A237E"/>
 
         <EditText
             android:id="@+id/country"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:hint="Country"
-            android:inputType="text"
-            tools:ignore="HardCodedText" />
+            android:inputType="textCapWords"
+            tools:ignore="HardCodedText"
+            android:textColor="#1A237E"/>
+
 
         <Button
             android:layout_width="wrap_content"

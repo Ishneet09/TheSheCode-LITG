@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+
+        <EditText
+            android:id="@+id/name_study_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Name"
+            android:textColor="#AD1457"
+            android:inputType="textCapWords"
+            tools:ignore="HardcodedText"
+            />
+
+        <EditText
+            android:id="@+id/location_study_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Location"
+            android:textColor="#AD1457"
+            android:inputType="textCapWords"
+            tools:ignore="HardCodedText" />
+
+
+
+        <EditText
+            android:id="@+id/email_study_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="e-mail"
+            android:textColor="#AD1457"
+            android:inputType="textEmailAddress"
+            tools:ignore="HardCodedText" />
+
+        <EditText
+            android:id="@+id/reason_study_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#AD1457"
+            android:textSize="14.5sp"
+            android:hint="You want a study partner for(A project,mock interview..)"
+            android:inputType="text"
+            tools:ignore="HardCodedText" />
+
+        <Button
+            android:id="@+id/submit_studyP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="105dp"
+            android:background="#AD1457"
+            android:padding="8dp"
+            android:text="Sign up to get a partner!"
+            android:textColor="#FCE4EC"
+            android:textSize="12sp"
+            tools:ignore="HardCodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current List of mentors. Click on any and get started!"
+            tools:ignore="HardCodedText"
+            android:layout_marginLeft="13dp"
+            android:textSize="15sp"
+            android:textColor="#AD1457"
+            android:textStyle="bold"/>
+
+
+
+
+    <ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:drawSelectorOnTop="true"
+        android:id="@+id/listView_studyP"/>
+
+
+
+</LinearLayout>

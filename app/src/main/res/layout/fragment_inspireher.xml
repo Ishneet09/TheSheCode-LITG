@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Name"
+        android:inputType="textCapWords"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/locationET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:hint="Location"
+        android:inputType="textCapWords"
+        tools:ignore="HardCodedText" />
+
+    <EditText
+        android:id="@+id/achievementET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:hint="Achievement"
+        android:inputType="text"
+        tools:ignore="HardCodedText" />
+
+    <Button
+        android:id="@+id/submit_ih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="120dp"
+        android:background="#B2EBF2"
+        android:padding="8dp"
+        android:text="Submit an Inspire Her"
+        android:textColor="#FF5252"
+        android:textSize="12sp"
+        tools:ignore="HardCodedText" />
+
+    <ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:drawSelectorOnTop="true"
+        android:id="@+id/listView_inspireHer"/>
+
+
+</LinearLayout>

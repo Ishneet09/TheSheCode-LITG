@@ -22,7 +22,7 @@
         android:text="TheSheCode"
         android:textColor="#E91E63"
         tools:ignore="HardCodedText,RtlHardcoded"
-        android:textSize="50sp"
+        android:textSize="35sp"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="50dp"
          />
