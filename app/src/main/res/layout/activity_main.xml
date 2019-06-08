@@ -20,20 +20,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TheSheCode"
-        android:textColor="#E91E63"
+        android:textColor="#D81B60"
         tools:ignore="HardCodedText,RtlHardcoded"
         android:textSize="35sp"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="75dp"
          />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="94dp"
         android:hint="E-mail"
         tools:ignore="HardCodedText"
         android:id="@+id/email_login"
+        android:textColor="#FF4081"
         android:inputType="textEmailAddress"/>
 
     <EditText
@@ -43,6 +46,7 @@
         android:layout_marginTop="10dp"
         android:hint="Password"
         tools:ignore="HardCodedText"
+        android:textColor="#FF4081"
         android:id="@+id/password_login"
         android:autofillHints="password"
         android:inputType="textPassword"/>
@@ -50,13 +54,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="130dp"
         android:padding="10dp"
         android:text="Sign in"
         android:id="@+id/login"
-        android:textColor="#FF5252"
+        android:textColor="#F8BBD0"
         android:background="#1A237E"
-        android:layout_marginLeft="120dp"/>
+        android:layout_marginLeft="146dp"/>
 
     <TextView
         android:layout_width="wrap_content"

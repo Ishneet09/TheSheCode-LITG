@@ -35,6 +35,10 @@ public class MentorFragment extends Fragment {
 
         Button sign_up_mentor = (Button)mentor_view.findViewById(R.id.submit_mentor);
 
+        for(int i = 8; i>=5; i--)
+            mentorItemArrayList.remove(i);
+
+
         loadData();
 
         sign_up_mentor.setOnClickListener(new View.OnClickListener() {
@@ -58,11 +62,16 @@ public class MentorFragment extends Fragment {
                 EditText mIntro = (EditText)mentor_view.findViewById(R.id.intro_mentor_ET);
                 String mentor_intro = mIntro.getText().toString();
 
-                if(!mentor_name.matches("") && !mentor_location.matches("") && !mentor_email.matches("") && !mentor_intro.matches("") )
+               if(!mentor_name.matches("") && !mentor_location.matches("") && !mentor_email.matches("") && !mentor_intro.matches("") )
                     mentorItemArrayList.add(new MentorItem(mentor_name, mentor_location, mentor_email, mentor_intro));
 
 
-                saveData();
+               saveData();
+
+               for(int i = 8; i>=5; i--)
+                   mentorItemArrayList.remove(i);
+
+
 
                 mName.setText("");
                 mLocation.setText("");

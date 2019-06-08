@@ -5,24 +5,41 @@
 
     <group android:checkableBehavior="single">
 
-        <item android:id="@+id/mentor"
-              android:title="Find a Mentor"
-              android:icon="@drawable/ic_mentor"
+        <item
+            android:id="@+id/mentor"
+            android:icon="@drawable/ic_mentor"
+            android:title="Find a Mentor"
             tools:ignore="HardcodedText" />
 
-        <item android:id="@+id/studypartner"
-            android:title="Find a Study Partner"
+        <item
+            android:id="@+id/studypartner"
             android:icon="@drawable/ic_studypartner"
+            android:title="Find a Study Partner"
             tools:ignore="HardcodedText" />
 
-        <item android:id="@+id/resources"
-            android:title="Resources"
+        <item
+            android:id="@+id/resources"
             android:icon="@drawable/ic_resources"
+            android:title="Resources"
             tools:ignore="HardcodedText" />
 
-        <item android:id="@+id/inspireHer"
-            android:title="InspireHer"
+        <item
+            android:id="@+id/inspireHer"
             android:icon="@drawable/ic_inspireher"
+            android:title="InspireHer"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/opportunities"
+            android:icon="@drawable/ic_opportunities"
+            android:title="Opportunities"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/meetups"
+            android:layout_width="match_parent"
+            android:icon="@drawable/ic_meetups"
+            android:title="Meetups and Conferences"
             tools:ignore="HardcodedText" />
 
 

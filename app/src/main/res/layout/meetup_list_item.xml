@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/name_studyP"
+        android:id="@+id/organiser_meetup_TV"
         android:textSize="20sp"
         android:textColor="#AD1457"
         android:textStyle="bold"
@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/location_studyP"
+        android:id="@+id/date_meetupTV"
         android:textColor="#F48FB1"
         android:textStyle="bold"
         android:paddingLeft="8dp"
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/email_studyP"
+        android:id="@+id/time_meetupTV"
         android:textColor="#F48FB1"
         android:textStyle="bold"
         android:paddingLeft="8dp"
@@ -37,7 +37,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/reason_studyP"
+        android:id="@+id/address_meetupTV"
+        android:textColor="#F48FB1"
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
+        android:paddingBottom="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description_meetupTV"
         android:textColor="#F48FB1"
         android:textStyle="bold"
         android:paddingLeft="8dp"

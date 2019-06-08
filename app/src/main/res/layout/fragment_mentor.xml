@@ -10,6 +10,7 @@
     >
 
 
+
     <EditText
         android:id="@+id/name_mentor_ET"
         android:layout_width="match_parent"
@@ -78,11 +79,12 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Current List of mentors. Click on any and get started!"
+          android:text="Current List of mentors.Scroll down, click on any and get started!"
           tools:ignore="HardCodedText"
           android:textColor="#AD1457"
           android:layout_marginLeft="13dp"
           android:textStyle="bold"/>
+
 
 
 

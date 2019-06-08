@@ -19,76 +19,66 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView register_textView;
-    Button login_btn;
-    DatabaseReference loginDatabase = FirebaseDatabase.getInstance().getReference("newUserSignUp");;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //for existing user trying to login in
-        login_btn = (Button) findViewById(R.id.login);
-        login_btn.setOnClickListener(new View.OnClickListener() {
+        final DatabaseReference userDatabase = FirebaseDatabase.getInstance().getReference("newUserSignUp");
+
+        Button loginButton = (Button) findViewById(R.id.login);
+        final TextView signUpTV = (TextView) findViewById(R.id.newUserTV);
+
+        final EditText emailLogin = (EditText) findViewById(R.id.email_login);
+        final EditText passwordLogin = (EditText) findViewById(R.id.password_login);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText email_login = (EditText) findViewById(R.id.email_login);
-                EditText pwd_login = (EditText) findViewById(R.id.password_login);
 
-                //log the user in
-                logIn(email_login.getText().toString(), pwd_login.getText().toString());
+                final String email = emailLogin.getText().toString();
+                final String password = passwordLogin.getText().toString();
+
+
+                userDatabase.orderByChild("email").equalTo(email).limitToLast(1).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot data : dataSnapshot.getChildren()) {
+                            for (DataSnapshot key : data.getChildren()) {
+                                if (key.getKey() != null && key.getKey().equals("password")) {
+                                    if (String.valueOf(key.getValue()).equals(password)) {
+                                        Intent navigation_screen = new Intent(MainActivity.this, navigationActivity.class);
+                                        startActivity(navigation_screen);
+                                        return;
+                                    } else {
+                                        String str = "Wrong Password entered!";
+                                        Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                        String str = "Please Register first!";
+                        Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
             }
         });
 
-
-        //in case there is a new user
-        register_textView = (TextView) findViewById(R.id.newUserTV);
-        register_textView.setOnClickListener(new View.OnClickListener() {
+        signUpTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent register = new Intent(MainActivity.this, RegisterByTextV.class);
-                startActivity(register);
+                Intent i = new Intent(getApplicationContext(), RegisterByTextV.class);
+                startActivity(i);
             }
         });
-    }
-
-    public void logIn(final String email, final String password) {
-
-        loginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-              if(dataSnapshot.child(email).exists()){
-                  if(!email.isEmpty()){
-                      Login user = dataSnapshot.child(email).getValue(Login.class);
-                      if(user.getPassword().equals(password)){
-
-                          Intent navigation_screen = new Intent(MainActivity.this, navigationActivity.class);
-                          startActivity(navigation_screen);
-                      }
-                      else{
-                          String str = "Wrong Password entered!";
-                          Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG);
-                      }
-                  }
-                  else{
-                      String str = "Please Register first!";
-                      Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG);
-                  }
-              }
-              else{
-                  String str = "Please Register first!";
-                  Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG);
-              }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
 
     }
 }

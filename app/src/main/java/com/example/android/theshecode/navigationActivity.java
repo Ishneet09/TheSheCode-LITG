@@ -62,6 +62,14 @@ public class navigationActivity extends AppCompatActivity implements NavigationV
             case R.id. inspireHer:
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new InspireHerFragment()).commit();
                 break;
+
+            case R.id.opportunities:
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new OpportunityFragment()).commit();
+                break;
+
+            case R.id.meetups:
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new MeetupFragment()).commit();
+                break;
         }
 
         return true;
