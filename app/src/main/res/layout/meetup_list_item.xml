@@ -25,14 +25,7 @@
         android:paddingLeft="8dp"
         android:paddingBottom="3dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/time_meetupTV"
-        android:textColor="#F48FB1"
-        android:textStyle="bold"
-        android:paddingLeft="8dp"
-        android:paddingBottom="3dp"/>
+
 
     <TextView
         android:layout_width="wrap_content"

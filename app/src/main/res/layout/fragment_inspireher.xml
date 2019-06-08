@@ -41,16 +41,7 @@
         android:inputType="text"
         tools:ignore="HardCodedText" />
 
-    <EditText
-        android:id="@+id/emailET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        android:hint="e-mail"
-        android:inputType="textEmailAddress"
-        tools:ignore="HardCodedText" />
+
 
     <Button
         android:id="@+id/submit_ih"
@@ -69,7 +60,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click on any entry and contact the wonder woman to know about her experience, her process and method so that YOU CAN SHINE TOO. Keep Going and Learning."
+        android:text="Write about your achievement process and feelings and help others SHINE TOO. Keep Going and Learning."
         tools:ignore="HardCodedText"
         android:textColor="#AD1457"
         android:layout_marginRight="8dp"

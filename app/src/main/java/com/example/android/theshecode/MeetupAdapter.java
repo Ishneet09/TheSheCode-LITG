@@ -32,8 +32,8 @@ public class MeetupAdapter extends ArrayAdapter<MeetupItem> {
         TextView dateTV = (TextView) listItemView.findViewById(R.id.date_meetupTV);
         dateTV.setText(currentItem.getDate());
 
-        TextView timeTV = (TextView) listItemView.findViewById(R.id.time_meetupTV);
-        timeTV.setText(currentItem.getTime());
+       // TextView timeTV = (TextView) listItemView.findViewById(R.id.time_meetupTV);
+        //timeTV.setText(currentItem.getTime());
 
         TextView addressTV = (TextView) listItemView.findViewById(R.id.address_meetupTV);
         addressTV.setText(currentItem.getAddress());

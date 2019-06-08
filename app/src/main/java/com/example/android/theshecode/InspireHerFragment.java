@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -28,6 +29,7 @@ public class InspireHerFragment extends Fragment {
     ListView ihListView;
     ArrayList<InspireHerItem> inspire_her_list;
 
+
     @Nullable
     @Override
 
@@ -37,8 +39,13 @@ public class InspireHerFragment extends Fragment {
 
        Button submit  = (Button)inspireHerView.findViewById(R.id.submit_ih);
 
-        for(int i = 9; i>=0; i--)
-            inspire_her_list.remove(i);
+        //code to remove irrelevant items added by mistake
+       // for(int i = 3; i>=1; i--)
+         //   inspire_her_list.remove(i);
+
+
+        // for(int i = 9; i>=0; i--)
+         //   inspire_her_list.remove(i);
 
         //instead of creating an array list, we create an array list in the form of json string. We create an array list in there only.
         //if it already exists, we store it as a json string in shared pref. so that it is loaded again even if the app is re-started.
@@ -51,7 +58,7 @@ public class InspireHerFragment extends Fragment {
             public void onClick(View view) {
                 //adding info to object by obtaining the text from edit text and then converting it to string to initialise the object
                 if(inspire_her_list.size()==0)
-                inspire_her_list.add(0, new InspireHerItem("Name:PQR", "Location:State, Country", "Achievement:Received efg scholarship", "email"));
+                inspire_her_list.add(0, new InspireHerItem("Name:PQR", "Location:State, Country", "Achievement:Received efg scholarship"));
 
                 //finding the edit text for obtaining info to be put in object
                 EditText nameEditText = (EditText)inspireHerView.findViewById(R.id.nameET);
@@ -63,19 +70,21 @@ public class InspireHerFragment extends Fragment {
                 EditText achievementEditText = (EditText)inspireHerView.findViewById(R.id.achievementET);
                 String ach = achievementEditText.getText().toString();
 
-                EditText emailET = (EditText)inspireHerView.findViewById(R.id.emailET);
-                String email = emailET.getText().toString();
+              //  EditText emailET = (EditText)inspireHerView.findViewById(R.id.emailET);
+              //  String email = emailET.getText().toString();
 
 
 
                 if(!name.matches("") && !location.matches("") && !ach.matches(""))
-                    inspire_her_list.add(new InspireHerItem(name, location, ach, email));
+                    inspire_her_list.add(new InspireHerItem(name, location, ach));
 
                 //to be put here because we need to save the data as json first before setting the adapter else, we wont be able to save it
                 //once we add an item to the list, we convert it to a json string, store it in a shared pref editor.
                 //hence, after we add the item to the list, we store it. This is done in saveData()
                 saveData();
 
+                for(int i = 3; i>=1; i--)
+                       inspire_her_list.remove(i);
 
 
                    nameEditText.setText("");
@@ -89,7 +98,7 @@ public class InspireHerFragment extends Fragment {
         ihListView.setAdapter(adapter_Ih);
         adapter_Ih.notifyDataSetChanged();
 
-        ihListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      /*  ihListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 InspireHerItem currentItem = (InspireHerItem) adapterView.getItemAtPosition(i);
@@ -101,7 +110,7 @@ public class InspireHerFragment extends Fragment {
                 startActivity(ih_intent);
 
             }
-        });
+        });*/
 
 
         return inspireHerView;

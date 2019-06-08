@@ -35,6 +35,8 @@ public class OpportunityFragment extends Fragment {
 
         Button post_opp = (Button)opportunity_view.findViewById(R.id.submit_opp);
 
+       // opportunityItemArrayList.remove(1);
+
         loadData();
 
         post_opp.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +64,7 @@ public class OpportunityFragment extends Fragment {
 
                 saveData();
 
-                opportunityItemArrayList.remove(1);
+
 
 
                oppFormET.setText("");

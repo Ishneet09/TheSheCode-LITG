@@ -35,8 +35,9 @@ public class MentorFragment extends Fragment {
 
         Button sign_up_mentor = (Button)mentor_view.findViewById(R.id.submit_mentor);
 
-        for(int i = 8; i>=5; i--)
-            mentorItemArrayList.remove(i);
+        //code to remove irrelevant items added by mistake
+        //for(int i = 7; i>=5; i--)
+          //  mentorItemArrayList.remove(i);
 
 
         loadData();
@@ -68,8 +69,11 @@ public class MentorFragment extends Fragment {
 
                saveData();
 
-               for(int i = 8; i>=5; i--)
-                   mentorItemArrayList.remove(i);
+                for(int i = 7; i>=5; i--)
+                     mentorItemArrayList.remove(i);
+
+                    //for(int i = 8; i>=5; i--)
+                //   mentorItemArrayList.remove(i);
 
 
 

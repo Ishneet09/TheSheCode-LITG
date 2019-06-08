@@ -11,11 +11,11 @@ public class InspireHerItem {
 
     }
 
-    public InspireHerItem(String nameIH, String locationIH, String achievementIH, String email){
+    public InspireHerItem(String nameIH, String locationIH, String achievementIH){
         this.nameIH = nameIH;
         this.locationIH = locationIH;
         this.achievementIH = achievementIH;
-        this.email = email;
+        //this.email = email;
     }
 
     public String getNameIH() {
@@ -30,6 +30,6 @@ public class InspireHerItem {
         return achievementIH;
     }
 
-    public String getEmail(){
-        return email;}
+   // public String getEmail(){
+     //   return email;}
 }

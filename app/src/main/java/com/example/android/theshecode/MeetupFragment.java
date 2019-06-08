@@ -42,7 +42,7 @@ public class MeetupFragment extends Fragment {
             public void onClick(View view) {
 
                 if(meetupItemArrayList.size()==0)
-                {meetupItemArrayList.add(new MeetupItem("Name:PQR", "DD-YY-MM","Time: start time and if possible end time", "CompleteLocation", "Agenda of the meetup in brief"));
+                {meetupItemArrayList.add(new MeetupItem("Name:PQR", "DD-YY-MM", "CompleteLocation", "Agenda of the meetup in brief"));
                 }
 
                 //extracting the text of all edit text views
@@ -52,8 +52,8 @@ public class MeetupFragment extends Fragment {
                 EditText dateET = (EditText)meetup_view.findViewById(R.id.date_meetup_ET);
                 String date_meetup = dateET.getText().toString();
 
-                EditText timeET = (EditText)meetup_view.findViewById(R.id.time_meetup_ET);
-                String time_meetup = timeET.getText().toString();
+               // EditText timeET = (EditText)meetup_view.findViewById(R.id.time_meetup_ET);
+                //String time_meetup = timeET.getText().toString();
 
 
                 EditText addressET = (EditText)meetup_view.findViewById(R.id.address_meetup_ET);
@@ -63,18 +63,18 @@ public class MeetupFragment extends Fragment {
                 String description_meetup = descriptionET.getText().toString();
 
                if(!organiser_meetup.matches("") && !date_meetup.matches("") && !address_meetup.matches("") && !description_meetup.matches("") )
-                    meetupItemArrayList.add(new MeetupItem(organiser_meetup, date_meetup, time_meetup, address_meetup, description_meetup));
+                    meetupItemArrayList.add(new MeetupItem(organiser_meetup, date_meetup, address_meetup, description_meetup));
 
 
                saveData();
 
-               meetupItemArrayList.remove(1);
+             //  meetupItemArrayList.remove(1);
 
 
 
                 organiserET.setText("");
                 dateET.setText("");
-                timeET.setText("");
+               // timeET.setText("");
                 addressET.setText("");
                 descriptionET.setText("");
             }

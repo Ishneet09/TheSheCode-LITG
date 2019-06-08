@@ -4,7 +4,7 @@ public class MeetupItem {
 
     private String organiser;
     private String date;
-    private String time;
+   // private String time;
     private String address;
     private String description;
 
@@ -12,10 +12,10 @@ public class MeetupItem {
 
     }
 
-    public MeetupItem(String organiser, String date, String time, String address, String description){
+    public MeetupItem(String organiser, String date, String address, String description){
         this.organiser = organiser;
         this.date = date;
-        this.time = time;
+       // this.time = time;
         this.address = address;
         this.description = description;
     }
@@ -28,9 +28,9 @@ public class MeetupItem {
         return date;
     }
 
-    public String getTime() {
-        return time;
-    }
+   // public String getTime() {
+     //   return time;
+    //}
 
     public String getAddress() {
         return address;

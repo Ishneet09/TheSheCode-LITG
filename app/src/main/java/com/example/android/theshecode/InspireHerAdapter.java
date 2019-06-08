@@ -35,6 +35,10 @@ public class InspireHerAdapter extends ArrayAdapter<InspireHerItem> {
          TextView achTV = (TextView)listItemView.findViewById(R.id.achievementIH);
          achTV.setText(currentItem.getAchievementIH());
 
+        //TextView emailTV = (TextView)listItemView.findViewById(R.id.emailIH);
+        //emailTV.setText(currentItem.getEmail());
+
+
         return listItemView;
 
     }

@@ -66,7 +66,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Current List of available opportunities.Scroll down,click on any and get started!"
+            android:text="Current List of available opportunities!"
             tools:ignore="HardCodedText"
             android:layout_marginLeft="13dp"
             android:textSize="15sp"
